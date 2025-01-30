@@ -62,8 +62,8 @@ async function autoRegister() {
     if (proxies.length === 0) {
         log.warn('No proxies found, running without proxy...');
     }
-    const numberOfWallets = await askQuestion("How many wallets/ref do you want to create? ");
-    const refCode = await askQuestion("Enter Your Referral code example => gm6Q9AV5: ");
+    const numberOfWallets = await askQuestion("Nhập số lượng ref muốn tạo nhỏ hơn số proxy : ");
+    const refCode = await askQuestion("Điền ref code tại đây => gm6Q9AV5: ");
     for (let i = 0; i < numberOfWallets; i++) {
         const proxy = proxies[i % proxies.length] || null;
         try {
